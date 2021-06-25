@@ -1,0 +1,59 @@
+:root {
+  --controls: hsl(38, 96%, calc((55 + var(--lightness, 0)) * 1%));
+  --controls-secondary: hsl(55, 100%, 50%);
+  --controls-color: hsl(0, 0%, 100%);
+  --sky: hsl(204, 80%, 80%);
+  --grass: hsl(98, 40%, 50%);
+  --dirt: hsl(35, 40%, 20%);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Fredoka One', cursive;
+  background: var(--sky);
+}
+
+button {
+  --controls: hsl(38, 96%, calc((55 + var(--lightness, 0)) * 1%));
+  background: var(--controls);
+  color: var(--controls-color);
+  padding: 1rem 2rem;
+  font-family: 'Fredoka One', cursive;
+  font-weight: bold;
+  font-size: 1.75rem;
+  border-radius: 1rem;
+  border: 4px var(--controls-color) solid;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+button:hover {
+  --lightness: 5;
+}
+button:active {
+  --lightness: -15;
+}
+
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
